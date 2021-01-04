@@ -15,7 +15,9 @@ html {
 
 body {
     font-size: 2rem;
-    background-color:#809fff;
+    background-image: url(assets/background.jpg);
+    background-size: cover;
+    /* background-color:#1c0160; */
     font-family: 'Raleway', sans-serif; 
     text-align: center;
     line-height: 1.6;
@@ -31,6 +33,7 @@ img {
     max-width: 1000px;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
 ul {
@@ -52,12 +55,6 @@ h1 {
     text-align: center;
     padding: 60px 30px;
     margin: 0;
-}
-
-header {
-    background-image: url(Assets/background.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 /* into section styling: */
@@ -94,7 +91,7 @@ header {
     display: flex;
     align-items: center;
     min-height: 240px;
-    background: rgb(255, 255, 255, 0.9);
+    background: rgb(255, 255, 255, 0.95);
     padding: 10px 0;
 }
 
@@ -110,7 +107,6 @@ header {
     justify-content: center;
     height: 100%;
     max-height: 100%;
-    /* max-width: calc(100vw / 2); */
 }
 
 .question {
@@ -159,12 +155,11 @@ header {
 
 .imageContainer p {
     margin:0;
-    font-size: 1.5rem;
     color: white;
 }
 
 /* to hide the radio buttons and make the images clickable ***********************/
-[type=radio] { 
+input[type=radio] { 
     position: absolute;
     opacity: 0;
     width: 0;
@@ -172,24 +167,23 @@ header {
 }
 
 /* Images*/
-[type=radio] + img {
+input[type=radio] + img {
     cursor: pointer;
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%; 
     margin: auto;
+    border: 5px solid transparent;
 }
 
 /* when checked */
-[type=radio]:checked + img {
+input[type=radio]:checked + img {
     border: 5px solid #00664d;
-    border-radius: 50%;
 }
 
 /* results sections *************************************************/
 .result {
-    background-image: url(Assets/background.jpg);
     background-size: cover;
     background-position: center;
     min-height: 50vh;
@@ -224,7 +218,7 @@ header {
     font-family: 'Patua One', cursive;
     font-size: 2.5rem;
     padding: 30px;
-    margin: 0;
+    margin: 0 auto;
     text-transform: uppercase;
 }
 
@@ -313,8 +307,12 @@ footer a {
 /* Media queries */
 @media (hover: none){
     .imageContainer div {
+        opacity: 0.95;
         border-radius: 50%;
-        opacity: 0.9;
+    }
+    
+    input[type=radio]:not(:checked) + img {
+        opacity: 0;
     }
 }
 

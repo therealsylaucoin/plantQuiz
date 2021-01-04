@@ -11,22 +11,25 @@ const showResult = document.querySelector('.showResult');
 //array of all the possible results - At end of code 
 
 //functions
-//for each input, get the value (string) and push it in to user answers array
-const addToAnswers = (e) => {
-    answers.push(e.target.value);
-}
-
 //check if the arrays match, if so, we have a plant match!
 const checkMatch = () => {
-    plants.forEach(plant => {
-        if (plant.attributes.toString() === answers.toString()){
-            plantResult = plant;
-            printResults();
-        }
-    });
-    showResult.style.display = 'none';
-    restartButton.style.display = 'block';
-    resultBanner.innerHTML = "Your plant match is:";
+    //for each input, if it is checked, push value into user answers array
+    inputs.forEach(input => input.checked ? answers.push(input.value) : null);
+    //if answers has a length of two, check for matches:
+    if (answers.length === 2){
+        //check for matches in both arrays
+        plants.forEach(plant => {
+            if (plant.attributes.toString() === answers.toString()){
+                plantResult = plant;
+                printResults();
+                showResult.style.display = 'none';
+                restartButton.style.display = 'block';
+                resultBanner.innerHTML = "Your plant match is:";
+            }
+        });
+    } else {
+        alert('You must answer both questions to get a result.');
+    }
 }
 
 //print the results to the page
@@ -54,9 +57,6 @@ const restart = () => {
 //initialize
 const init = () => {
     //Event listeners
-    inputs.forEach(input => {
-        input.addEventListener('click', addToAnswers);
-    });
     resultButton.addEventListener('click', checkMatch);
     restartButton.addEventListener('click', restart);
 }
