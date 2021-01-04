@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houseplant Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 id="startQuiz">Which plant is for your home?</h1>
+
+        <div class="intro wrapper">
+
+            <div class="introText">
+                <p>Have you always wanted to know which plant would be best for your home? </p>
+
+                <p>Complete this quiz to find the perfect plant for YOU!</p>
+
+                <a href="#start" class="buttonStart">Take the Quiz!</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <h2 class="banner" id="start">Select an answer for both questions:</h2>
+
+        <section class="questionBlock wrapper">
+
+            <div class="answerChoices wrapper">
+
+                <p class="question">How sunny is your home?</p>
+
+                <form id="levelOneForm" class="flexContainer">
+
+                    <div class="imageContainer">
+                        <label for="highSun">
+                            <input type="radio" id="highSun" name="levelOne" value="highSun">
+                            <img src="assets/levelOne/high.jpg" alt="Vector drawing of a sun.">
+                            <div>
+                                <p>My home has full sun.<p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="imageContainer">
+                        <label for="mediumSun">
+                            <input type="radio" id="mediumSun" name="levelOne" value="mediumSun">
+                            <img src="assets/levelOne/medium.jpg"
+                                alt="Vector drawing of a sun with some clouds.">
+                            <div>
+                                <p>My home has average sun.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="imageContainer">
+                        <label for="lowSun">
+                            <input type="radio" id="lowSun" name="levelOne" value="lowSun">
+                            <img src="assets/levelOne/low.jpg" alt="Vector drawing of clouds.">
+                            <div>
+                                <p>My home gets little light.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="questionBlock wrapper">
+
+            <div class="answerChoices wrapper">
+
+                <p class="question">How much time and energy do you want to spend on a plant?</p>
+
+                <form id="levelTwoForm" class="flexContainer">
+
+                    <div class="imageContainer">
+                        <label for="highTime">
+                            <input type="radio" id="highTime" name="levelTwo" value="highTime">
+                            <img src="assets/levelTwo/high.jpg"
+                                alt="Vector drawing of a woman watering a houseplant while surounded by plants.">
+                            <div>
+                                <p>All of it!</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="imageContainer">
+                        <label for="mediumTime">
+                            <input type="radio" id="mediumTime" name="levelTwo" value="mediumTime">
+                            <img src="assets/levelTwo/medium.jpg"
+                                alt="Vector drawing of a woman holding a plant.">
+                            <div>
+                                <p>Some time.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="imageContainer">
+                        <label for="lowTime">
+                            <input type="radio" id="lowTime" name="levelTwo" value="lowTime">
+                            <img src="assets/levelTwo/low.jpg"
+                                alt="Vector drawing of a woman reading a book sitting in a chair.">
+                            <div>
+                                <p>No time.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="result">
+
+            <h2 class="banner" id="resultBanner">This way to your perfect plant!</h2>
+
+            <div class="wrapper resultContainer">
+
+                <div class="showResult">
+                    <p>Click to</p>
+                    <button class="buttonResult">See my plant match!</button>
+                </div>
+
+                <div class="printedResult">
+                    <span class="finalResult"></span>
+                    <!-- insert result here! -->
+                    <a class="restartButton" href="#startQuiz" id="restart">Start Over!</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="wrapper">
+            <p class="copyright">Plant Quiz by Syl</p>
+            <a href="https://junocollege.com/" class="juno">Created at Juno College</a>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+<!-- Image credits: -->
+<!-- Snake Plant:
+<span>Photo by <a href="https://unsplash.com/@karaeads?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kara Eads</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+Alocasia Polly:
+<span>Photo by <a href="https://unsplash.com/@karaeads?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Kara Eads</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+Fiddle leaf:
+<span>Photo by <a href="https://unsplash.com/@feeypflanzen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Severin Candrian</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+Ficus Benjamina:
+<span>Photo by <a href="https://unsplash.com/@feeypflanzen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Severin Candrian</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+Philodendron brasil:
+<span>Photo by <a href="https://unsplash.com/@feeypflanzen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Severin Candrian</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> -->
+<!-- calathea:
+<span>Photo by <a href="https://unsplash.com/@feeypflanzen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Severin Candrian</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> -->
+
+</html>
