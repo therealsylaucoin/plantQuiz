@@ -29,6 +29,8 @@ const checkMatch = () => {
         });
     } else {
         alert('You must answer both questions to get a result.');
+        answers = [];
+        inputs.forEach(input =>input.checked = false);
     }
 }
 
