@@ -16,7 +16,9 @@ const checkMatch = () => {
     //for each input, if it is checked, push value into user answers array
     inputs.forEach(input => input.checked ? answers.push(input.value) : null);
     //if answers has a length of two, check for matches:
-    if (answers.length === 2){
+    if (answers.length >= 2){
+        //slice the array to two, from the end
+        answers = answers.slice(-2);
         //check for matches in both arrays
         plants.forEach(plant => {
             if (plant.attributes.toString() === answers.toString()){
@@ -29,8 +31,6 @@ const checkMatch = () => {
         });
     } else {
         alert('You must answer both questions to get a result.');
-        answers = [];
-        inputs.forEach(input =>input.checked = false);
     }
 }
 
