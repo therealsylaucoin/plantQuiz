@@ -17,7 +17,6 @@ body {
     font-size: 2rem;
     background-image: url(assets/background.jpg);
     background-size: cover;
-    /* background-color:#1c0160; */
     font-family: 'Raleway', sans-serif; 
     text-align: center;
     line-height: 1.6;
@@ -57,7 +56,7 @@ h1 {
     margin: 0;
 }
 
-/* into section styling: */
+/* intro section styling: */
 .introText {
     display: flex;
     flex-direction: column;
@@ -87,28 +86,22 @@ h1 {
 }
 
 /* Question-answer section styling */
-.questionBlock {
-    display: flex;
-    align-items: center;
+form {
     min-height: 240px;
     background: rgb(255, 255, 255, 0.95);
     padding: 10px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.questionBlock img {
+form img {
     max-height: 100%;
     margin: 10px;
 }
 
 /* questions styling: *************************/
-.answerChoices {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    max-height: 100%;
-}
-
 .question {
     color: black;
     font-family: 'Raleway', sans-serif; 
@@ -136,16 +129,7 @@ h1 {
     color: black;
     width: 100%;
 	height: 100%;
-}
-
-.imageContainer:hover div {
-    border-radius: 50%;
-	opacity: 1;
-}
-
-.imageContainer p {
     margin:0;
-    color: black;
 }
 
 /* to hide the radio buttons and make the images clickable ***********************/

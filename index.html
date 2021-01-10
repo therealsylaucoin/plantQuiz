@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fun quiz to determine which house plant is best suited for your home.">
+    <link rel="icon" href="assets/favicon.png" type="image/png" sizes="16x16"> 
     <title>Houseplant Quiz</title>
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +15,7 @@
 
     <header>
 
-        <h1 class="wrapper" id="startQuiz">Which plant is best for your home?</h1>
+        <h1 class="wrapper" id="startQuiz">What's that plant for you?</h1>
 
         <div class="intro wrapper">
 
@@ -33,97 +35,85 @@
 
         <h2 class="banner wrapper" id="start">Select an answer for both questions:</h2>
 
-        <section class="questionBlock wrapper">
+        <form class="wrapper" autocomplete="off">
 
-            <div class="answerChoices wrapper">
+            <p class="question">How much sun does your home get?</p>
 
-                <p class="question">How much sun does your home get?</p>
+            <div class="wrapper flexContainer">
 
-                <form id="levelOneForm" class="flexContainer">
+                <div class="imageContainer">
+                    <label for="highSun">
+                        <input type="radio" id="highSun" name="levelOne" value="highSun">
+                        <img src="assets/levelOne/high.jpg" alt="Vector drawing of a sun.">
+                        <div>
+                            <p>Lots of sun!<p>
+                        </div>
+                    </label>
+                </div>
 
-                    <div class="imageContainer">
-                        <label for="highSun">
-                            <input type="radio" id="highSun" name="levelOne" value="highSun">
-                            <img src="assets/levelOne/high.jpg" alt="Vector drawing of a sun.">
-                            <div>
-                                <p>Lots of sun!<p>
-                            </div>
-                        </label>
-                    </div>
+                <div class="imageContainer">
+                    <label for="mediumSun">
+                        <input type="radio" id="mediumSun" name="levelOne" value="mediumSun">
+                        <img src="assets/levelOne/medium.jpg"
+                            alt="Vector drawing of a sun with some clouds.">
+                        <div>
+                            <p>Average sun.</p>
+                        </div>
+                    </label>
+                </div>
 
-                    <div class="imageContainer">
-                        <label for="mediumSun">
-                            <input type="radio" id="mediumSun" name="levelOne" value="mediumSun">
-                            <img src="assets/levelOne/medium.jpg"
-                                alt="Vector drawing of a sun with some clouds.">
-                            <div>
-                                <p>Average sun.</p>
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="imageContainer">
-                        <label for="lowSun">
-                            <input type="radio" id="lowSun" name="levelOne" value="lowSun">
-                            <img src="assets/levelOne/low.jpg" alt="Vector drawing of clouds.">
-                            <div>
-                                <p>Not much sun.</p>
-                            </div>
-                        </label>
-                    </div>
-
-                </form>
-
+                <div class="imageContainer">
+                    <label for="lowSun">
+                        <input type="radio" id="lowSun" name="levelOne" value="lowSun">
+                        <img src="assets/levelOne/low.jpg" alt="Vector drawing of clouds.">
+                        <div>
+                            <p>Not much sun.</p>
+                        </div>
+                    </label>
+                </div>
+        
             </div>
 
-        </section>
+            <p class="question">How much time and energy do you want to spend on a plant?</p>
+            
+            <div class="wrapper flexContainer">
 
-        <section class="questionBlock wrapper">
+                <div class="imageContainer">
+                    <label for="highTime">
+                        <input type="radio" id="highTime" name="levelTwo" value="highTime">
+                        <img src="assets/levelTwo/high.jpg"
+                            alt="Vector drawing of a woman watering a houseplant while surounded by plants.">
+                        <div>
+                            <p>All of it!</p>
+                        </div>
+                    </label>
+                </div>
 
-            <div class="answerChoices wrapper">
+                <div class="imageContainer">
+                    <label for="mediumTime">
+                        <input type="radio" id="mediumTime" name="levelTwo" value="mediumTime">
+                        <img src="assets/levelTwo/medium.jpg"
+                            alt="Vector drawing of a woman holding a plant.">
+                        <div>
+                            <p>Some time.</p>
+                        </div>
+                    </label>
+                </div>
 
-                <p class="question">How much time and energy do you want to spend on a plant?</p>
-
-                <form id="levelTwoForm" class="flexContainer">
-
-                    <div class="imageContainer">
-                        <label for="highTime">
-                            <input type="radio" id="highTime" name="levelTwo" value="highTime">
-                            <img src="assets/levelTwo/high.jpg"
-                                alt="Vector drawing of a woman watering a houseplant while surounded by plants.">
-                            <div>
-                                <p>All of it!</p>
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="imageContainer">
-                        <label for="mediumTime">
-                            <input type="radio" id="mediumTime" name="levelTwo" value="mediumTime">
-                            <img src="assets/levelTwo/medium.jpg"
-                                alt="Vector drawing of a woman holding a plant.">
-                            <div>
-                                <p>Some time.</p>
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="imageContainer">
-                        <label for="lowTime">
-                            <input type="radio" id="lowTime" name="levelTwo" value="lowTime">
-                            <img src="assets/levelTwo/low.jpg"
-                                alt="Vector drawing of a woman reading a book sitting in a chair.">
-                            <div>
-                                <p>No time.</p>
-                            </div>
-                        </label>
-                    </div>
-
-                </form>
-
+                <div class="imageContainer">
+                    <label for="lowTime">
+                        <input type="radio" id="lowTime" name="levelTwo" value="lowTime">
+                        <img src="assets/levelTwo/low.jpg"
+                            alt="Vector drawing of a woman reading a book sitting in a chair.">
+                        <div>
+                            <p>No time.</p>
+                        </div>
+                    </label>
+                </div>
+                
             </div>
 
-        </section>
+        </form>
 
         <section class="result">
 

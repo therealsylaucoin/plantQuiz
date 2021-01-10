@@ -1,6 +1,6 @@
 //variables
 const inputs = document.querySelectorAll('input');
-const forms = document.querySelectorAll('form');
+const form = document.querySelector('form');
 let plantResult = {};
 let answers = [];
 const restartButton = document.querySelector('#restart');
@@ -47,9 +47,7 @@ const printResults = () => {
 const restart = () => {
     //when "start over" button is clicked, forms are cleared and result section reverts to the original:
     answers = [];
-    forms.forEach(form => {
-        form.reset();
-    });
+    form.reset();
     showResult.style.display = 'block';
     finalResult.innerHTML = '';
     restartButton.style.display = 'none';
